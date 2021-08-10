@@ -499,134 +499,92 @@ form button i::after {
 
 /* titre activité */
 
-.titreACT {
-  font-family: "ralewaybold";
-  margin-left: 20px;
+#activities { 
+    height: 534px;
+    margin-top: 30px;   
+}   
+/*Frame 4 columns*/
+.activities_frame {             
+    padding-left: 10px; 
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+/*activities title*/
+#activities h2 {          
+    padding: 0 0 20px 25px;   
+}
+  /*4 Frames*/
+.frame1, .dblFrame {                   
+    height: 447px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
 }
 
-/* la marge entre le haut et le bas du site */
-#Activites {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.activity_link {
+    width: 95%;
+}
+ /*Frame 1 and 3: single activity */
+.frame1 {                  
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px #c4c7cc; 
+}
+.frame1:hover {
+    box-shadow:1px 1px 5px #c4c7cc;
+}
+/*Frame 2 and 4: double activity */
+.dblFrame div {             
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px #c4c7cc;  
 }
 
-/* class général div principal */
-.bloc_activites {
-  width: 100%;
-  height: 600px;
+.dblFrame div:hover {
+    box-shadow:1px 1px 5px #c4c7cc;
 }
+/* --Frame 2 top block */
 
-/* les bloc des petite photo */
-.bloc_activites2356 {
-  width: 23%;
-  height: 600px;
+.dblFrame_block1 {          
+    width:90%; 
 }
-
-/* le placement de la div principal activité (total) */
-.flex_between_act {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.dblFrame_block2 {          
+    height: 175px;
 }
-
-/* class spécifique pour chaque photo (centrage du titre et photo) */
-.display_column_act {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.dblFrame_block4 {           
+    height: 195px;
 }
-
-/* placement des 2 photos dans chaque div */
-.flex_column_between_act {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.dblFrame_block5 {           
+    height: 210px;
 }
-
-/* reglage bloc */
-.cadre_blanc_act {
-  width: 23%;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px 1px #f2f2f2;
+/*activities pictures*/
+.activities_frame img {     
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
 }
-
-/* zoom lors du survole des photos 1 et 4 */
-.cadre_blanc_act:hover {
-  cursor: pointer;
-  transform: scale(1.03);
+.activities_pic1 {                          
+    height: 389px;  
 }
-
-/* les petites images activités */
-.img2356 {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px 1px #f2f2f2;
+.activities_pic2 {
+    height: 174px;
 }
-
-/* zoom lors du survole des photos 2356 */
-.img2356:hover {
-  cursor: pointer;
-  transform: scale(1.03);
+.activities_pic3 {
+    height: 118px;
 }
-
-/* aggrandissement de la div titre */
-.hauteur_titre_act {
-  height: 70px;
+.activities_pic4 {
+    height: 138px;
 }
-
-/*le titre h3 sous texte photo*/
-.titre_act {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 5%;
-  width: 95%;
-  color: black;
-  font-family: "ralewaybold";
+.activities_pic5 {
+    height: 154px;
 }
-
-/* les différentes immages */
-.imagesactivites1 {
-  image-rendering: pixelated;
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-  height: 526px;
-}
-
-.imagesactivites2 {
-  image-rendering: pixelated;
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-  height: 250px;
-}
-
-.imagesactivites3 {
-  image-rendering: pixelated;
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-  height: 150px;
-}
-
-.imagesactivites4 {
-  image-rendering: pixelated;
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-  height: 526px;
-}
-
-.imagesactivites5 {
-  image-rendering: pixelated;
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-  height: 200px;
-}
-
-.imagesactivites6 {
-  image-rendering: pixelated;
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-  height: 200px;
+.activities_frame h3 {
+    padding-left: 15px;
 }
 
 /* FOOTER */
@@ -683,7 +641,7 @@ form button i::after {
 /* MEDIA QUERIES (TOUJOURS METTRE A LA FIN DU CSS) */
 
 /* MOBILE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /* MENU  */
 
   #logo_principal {
@@ -918,78 +876,54 @@ form button i::after {
   }
 
   /* ACTIVITÉ */
+  #activities {
+        height: auto;
+        padding-left: 0;
+        margin: 0 20px;
+    }
 
-  /* le titre activité */
-  .titreACT {
-    font-size: 1.1rem;
-    margin-left: 25px;
-  }
+    .activities_frame {
+        width: 100%;
+        display: inline;
+        padding-left: 0;
+    }
+    /*font larger*/
+    .activities_frame h3 {
+        font-size: 18px;
+    }
+    
+    .frame1 {
+        width: auto;
+        height: 240px;
+        margin: 10px 0 5px 10px;
+    }
+    .frame1:active {
+        box-shadow:1px 1px 5px #c4c7cc;
+    }
+    .dblFrame {
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .dblFrame div{
+        width: auto;
+        margin: 10px 0 0 10px;
+    }
+    .dblFrame div:active {
+        box-shadow: 1px 1px 5px #c4c7cc;
+    }
 
-  /* marge entre section activité et populaire */
-  #Activites {
-    margin-top: 30px;
-  }
-
-  /* positionnement en colonne du bloc activité */
-  .flex_between_act {
-    flex-direction: column;
-  }
-
-  /* la largeur des images 1 et 4 */
-  .display_column_act {
-    width: auto;
-    margin-left: 15px;
-  }
-
-  .imagesactivites1 {
-    height: 150px;
-  }
-
-  .imagesactivites2 {
-    height: 150px;
-  }
-
-  .imagesactivites3 {
-    height: 150px;
-  }
-
-  .imagesactivites4 {
-    height: 150px;
-  }
-  .imagesactivites5 {
-    height: 150px;
-  }
-  .imagesactivites6 {
-    height: 150px;
-  }
-
-  /* les marges entre les photos (grandes) */
-  .cadre_blanc_act {
-    margin-right: 15px;
-    margin-bottom: 5px;
-    margin-top: 20px;
-  }
-
-  /* les marges entre les photos (petites) */
-  .img2356 {
-    margin-bottom: 5px;
-    margin-top: 20px;
-  }
-
-  /* la largeur de l'image et marge */
-  .bloc_activites2356 {
-    width: 95%;
-    margin-right: 15px;
-  }
-
-  .titreh3 {
-    font-size: small;
-  }
-  /* afficher plus */
-  #gras {
-    margin-left: 30px;
-  }
-
+    /*activities block resized*/
+    .dblFrame_block1, .dblFrame_block2, 
+    .dblFrame_block4, .dblFrame_block5  {
+        height: 240px;
+        margin: 10px;
+    }
+    
+    #activities img{
+        height: 180px;
+        width: 100%;
+    }
   /* FOOTER */
 
   /* positionnement du footer en colonne */
@@ -1022,7 +956,7 @@ form button i::after {
 }
 
 /* tablette ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+@media only screen and (min-width: 767px) and (max-width: 1200px) {
   /* Styles */
 
   /* BARRE DE RECHERCHE */
@@ -1078,23 +1012,7 @@ form button i::after {
     font-size: 70%;
   }
 
-  .imagespopulaires1 {
-    width: 45%;
-    height: 100px;
-    margin-left: -4px;
-  }
 
-  .imagespopulaires2 {
-    width: 45%;
-    height: 100px;
-    margin-left: -4px;
-  }
-
-  .imagespopulaires3 {
-    width: 45%;
-    height: 100px;
-    margin-left: -4px;
-  }
 
   /* marge entre les lien */
   .P_pop {
@@ -1108,6 +1026,23 @@ form button i::after {
     background-color: #f2f2f2;
     width: 97%;
     margin-top: 40px;
+
+	 margin-left: 0px;
+    margin-right: 0px;
+    /*margin-top: 10px;*/
+    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+	
+  }
+  .bloc_pop{
+	width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+	background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 15px 20px 0 20px;
   }
 
   /* replacement du bloc heb */
@@ -1147,65 +1082,49 @@ form button i::after {
   }
 
   /* BLOC ACTIVITÉ */
+/*activities section*/ 
+        .activities_frame {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        /*keep fixed margin around*/
+        .activity_link {
+            width: 33%;
+        }
+        .activity_link1 {
+            width: 60%;
+        }
+        /*frames resized to fit in 2 rows of 3 activities*/
+        .frame1 {
+            height: 200px;
+            margin: 10px 0 20px 10px;
+        }
+        .frame1:active {
+            box-shadow:1px 1px 5px #c4c7cc;
+        }
+        .dblFrame {
+            height: auto;
+            width: 65%;
+            margin-bottom: 20px;
+            flex-direction: row;
+        }
+        .dblFrame div{
+            width: auto;
+            margin: 10px 0 0 10px;
+        }
+        .dblFrame div:active {
+            box-shadow: 1px 1px 5px #c4c7cc;
+        }
+        .dblFrame_block1, .dblFrame_block2, 
+        .dblFrame_block4, .dblFrame_block5  {
+            height: 200px;
+            margin: 10px;
+        }
+        
+        #activities img{
+            height: 144px;
+        }
 
-  #Activites {
-    margin-left: -10px;
-    margin-top: 40px;
-  }
-
-  .bloc_activites {
-    margin-bottom: -90px;
-  }
-
-  /* marge des images 1 et 2 */
-  .display_column_act {
-    margin-bottom: 90px;
-  }
-  /* largeur des photos */
-  .bloc_activites2356 {
-    width: 60%;
-    padding-left: 20px;
-    justify-content: center;
-  }
-
-  /* position de l'image parc national des calanques en bas pour alignement */
-  .position_haute {
-    align-self: flex-start;
-    margin-right: -220px;
-  }
-
-  /* position de l'image vieux port en haut pour alignement */
-  .position_bas {
-    align-self: flex-end;
-    margin-left: 0px;
-  }
-
-  /* ordre des photos changer pour la 1er et 4ème */
-  .cadre_blanc_act {
-    order: -1;
-  }
-
-  /* repositionnement des images */
-  .flex_between_act {
-    flex-direction: row;
-  }
-
-  /* largeur des images */
-  .imagesactivites1 {
-    width: 220px;
-  }
-
-  /* largeur des images */
-  .imagesactivites4 {
-    width: 220px;
-  }
-
-  /* marge et largeur des autres images */
-  .img2356 {
-    width: 210px;
-    margin-bottom: 57px;
-    margin-top: -14px;
-  }
 
   /* FOOTER */
 
@@ -1213,7 +1132,7 @@ form button i::after {
   #footer {
     margin-top: 0px;
     flex-direction: row;
-    height: 350px;
+    height: 200px;
     font-size: 90%;
   }
 
